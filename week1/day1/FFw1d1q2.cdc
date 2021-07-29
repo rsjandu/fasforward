@@ -61,7 +61,6 @@ pub resource Picture {
     }
 
 
-
   pub fun display(canvas: Canvas){
              
         self.createFrameborder(canvas: canvas)
