@@ -81,28 +81,6 @@ pub fun serializeStringArray(_ lines: [String]): String {
   return buffer
 }
 
-pub resource Printer {
-  pub var printLog: {String: Canvas}
-  
-  init() {
-     self.printLog = {}
-  }
-
- 
-  pub fun print(canvas: Canvas): @Picture? {
-
-    if (!self.printLog.containsKey(canvas.pixels)) {
-     
-      let picture <- create Picture(canvas: canvas)
-      self.printLog[canvas.pixels] = canvas
-      log(self.printLog)
-    return <- picture
-    }else {
-      log("Canvas has already been printed");
-      return nil
-    }
-  }
-}
 
 pub fun main() {
   let pixelsX = [

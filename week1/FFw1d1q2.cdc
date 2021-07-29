@@ -100,7 +100,7 @@ pub resource Printer {
     return <- picture
 
     }else {
-      log("This Canvas has already been printed so not Displaying......");
+      log("This Canvas has already been printed so not Displaying......!!");
       return nil
     }
   }
